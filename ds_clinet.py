@@ -178,6 +178,7 @@ def main(audio:str = None):
     # sphinx-doc: python_ref_inference_stop
     inference_end = timer() - inference_start
     print('Inference took %0.3fs for %0.3fs audio file.' % (inference_end, audio_length), file=sys.stderr)
+    return ds.stt(audio)
 
 if __name__ == '__main__':
     main()
